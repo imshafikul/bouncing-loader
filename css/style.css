@@ -4,7 +4,7 @@ Optional settings
 
 body {
   margin: 0;
-  background: rgba(6, 88, 136, 0.99);
+  /* background: rgba(6, 88, 136, 0.99); */
   display: flex;
   align-content: center;
   justify-content: center;
@@ -33,9 +33,9 @@ Bouncing Animation Loader CSS
   width: 1rem;
   height: 1rem;
   margin: 5rem 0.5rem;
-  background: #fff;
+  background: red;
   border-radius: 50%;
-  animation: bouncingLoader 0.6s infinite alternate;
+  animation: bouncing 0.6s infinite alternate;
 }
 
 .bouncing__loader > span:nth-child(2) {
@@ -46,7 +46,7 @@ Bouncing Animation Loader CSS
   animation-delay: 0.4s;
 }
 
-@keyframes bouncingLoader {
+@keyframes bouncing {
   from {
     width: 0.1rem;
     height: 0.1rem;
@@ -75,9 +75,9 @@ Bouncing Wave Loader
   width: 1rem;
   height: 1rem;
   margin: 5rem 0.5rem;
-  background: #fff;
+  background: red;
   border-radius: 50%;
-  animation: bouncingWaveLoader 0.6s infinite alternate;
+  animation: bouncingWave 0.6s infinite alternate;
 }
 
 .bouncing__wave__loader > span:nth-child(2) {
@@ -88,7 +88,7 @@ Bouncing Wave Loader
   animation-delay: 0.4s;
 }
 
-@keyframes bouncingWaveLoader {
+@keyframes bouncingWave {
   from {
     width: 0.1rem;
     height: 0.1rem;
@@ -101,5 +101,45 @@ Bouncing Wave Loader
     height: 1rem;
     opacity: 0.1;
     transform: translate3d(0, -1rem, 0);
+  }
+}
+
+/* 
+
+Spinner CSS
+*/
+
+.spinner {
+  width: 3rem;
+  height: 3rem;
+  border: 0.2rem solid;
+  color: red;
+  border-radius: 50%;
+  border-top-color: transparent;
+  animation: spinner 0.75s linear infinite;
+  display: block;
+}
+
+.spinner--altered {
+  width: 3rem;
+  height: 3rem;
+  border: 0.2rem solid;
+  color: red;
+  border-radius: 50%;
+  border-top-color: red;
+  border-bottom-color: rgba(255, 0, 0, 0.253);
+  border-left-color: rgba(255, 0, 0, 0.253);
+  border-right-color: rgba(255, 0, 0, 0.253);
+  animation: spinner 0.75s linear infinite;
+  display: block;
+}
+
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
   }
 }
